@@ -1,0 +1,24 @@
+{
+  "name": "ECharts_Creator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaviFigueroa05/ECharts_Creator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JaviFigueroa05/ECharts_Creator/issues"
+  },
+  "homepage": "https://github.com/JaviFigueroa05/ECharts_Creator#readme",
+  "devDependencies": {
+    "electron": "^9.2.0"
+  }
+}
