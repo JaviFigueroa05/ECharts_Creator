@@ -5,11 +5,12 @@
     <title>Hello World!</title>
     <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+
+    <script src="..\node_modules\echarts\dist\echarts.min.js"></script>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using node <script>document.write(process.versions.node)</script>,
-    Chrome <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
+    <h1>Hello Echarts!</h1>
+    <div id="echarts" style="width: 600px;height:400px;"></div>
   </body>
+  <script src="js\render.js"></script>
 </html>

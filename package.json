@@ -20,5 +20,8 @@
   "homepage": "https://github.com/JaviFigueroa05/ECharts_Creator#readme",
   "devDependencies": {
     "electron": "^9.2.0"
+  },
+  "dependencies": {
+    "echarts": "^4.8.0"
   }
 }
