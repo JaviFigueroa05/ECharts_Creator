@@ -4,16 +4,14 @@ var myChart = echarts.init(document.getElementById('echarts'));
 // draw chart
 myChart.setOption({
     title: {
-        text: 'Test'
-    },
-    tooltip: {},
-    xAxis: {
-        data: ['shirt', 'cardign', 'chiffon shirt', 'pants', 'heels', 'socks']
-    },
-    yAxis: {},
-    series: [{
-        name: 'sales',
-        type: 'bar',
-        data: [5, 20, 36, 10, 10, 20]
-    }]
+        text: 'Test {a0|Style}',
+        textStyle: {
+            fontFamily: 'Kokila',
+            rich: {
+                a0: {
+                    fontWeight: 'bold'
+                }
+            } 
+        }
+    }
 });

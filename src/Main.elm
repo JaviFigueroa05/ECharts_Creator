@@ -1,35 +1,60 @@
 module Main exposing (..)
-import Browser
-import Html exposing (Html, button, div, text)
+import Browser exposing (Document)
+import Html exposing (Html, button, div, text, h1)
 import Html.Events exposing (onClick)
+import Html.Attributes exposing (id, style)
+import Html.Attributes exposing (title)
 
 -- MAIN
+main : Program () Model Msg
 main =
-  Browser.sandbox { init = init, update = update, view = view }
+  Browser.document 
+    { init = init
+    , subscriptions = subscriptions
+    , update = update
+    , view = view
+    }
 
 -- MODEL
 type alias Model = Int
 
-init : Model
-init =
-  0
+init : () -> ( Model, Cmd Msg )
+init _ =
+  ( 1, Cmd.none )
 
 -- UPDATE
 type Msg = Increment | Decrement
 
-update : Msg -> Model -> Model
+update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
   case msg of
     Increment ->
-      model + 1
+      ( model + 1
+      , Cmd.none
+      )
     Decrement ->
-      model - 1
+      ( model - 1
+      , Cmd.none
+      )
+
+-- SUBSCRIPTIONS
+subscriptions : Model -> Sub Msg
+subscriptions _ =
+    Sub.none
 
 -- VIEW
-view : Model -> Html Msg
+view : Model -> Document Msg
 view model =
-  div []
-    [ button [ onClick Decrement ] [ text "-" ]
+  { title = "Echarts Creator"
+  , body = 
+    [ Html.h1 [] [ text "Hello Echarts and Elm!" ]
+    , button [ onClick Decrement ] [ text "-" ]
     , div [] [ text (String.fromInt model) ]
     , button [ onClick Increment ] [ text "+" ]
+    , div [ id "echarts"
+          , style "width" "600px"
+          , style "height" "400px"
+          ] []
     ]
+  }
+    
