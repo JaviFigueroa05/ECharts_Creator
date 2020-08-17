@@ -4,7 +4,7 @@ var myChart = echarts.init(document.getElementById('echarts'));
 // draw chart
 myChart.setOption({
     title: {
-        text: 'ECharts entry example'
+        text: 'Test'
     },
     tooltip: {},
     xAxis: {
