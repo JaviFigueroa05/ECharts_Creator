@@ -1,0 +1,166 @@
+{
+    "title": {
+        "documentation": "https://echarts.apache.org/en/option.html#title",
+        "dataType": "object",
+        "properties": {
+            "id": { "dataType": "string" },
+            "show": { "dataType": "bool" },
+            "text": { "dataType": "string" },
+            "link": { "dataType": "string" },
+            "target": {
+                "dataType": "string",
+                "values": [ "blank", "self" ]
+            },
+            "textStyle": { // Special Case
+                "dataType": "object",
+                "properties": {} 
+            },
+            "subtext": { "dataType": "string" },
+            "sublink": { "dataType": "string" },
+            "subtarget": {
+                "dataType": "string",
+                "values": [ "blank", "self" ]
+            },
+            "subtextStyle": { // Special Case
+                "dataType": "object",
+                "properties": {}
+            },
+            "textAlign": {
+                "dataType": "string",
+                "values": [ "auto", "left", "right", "center" ]
+            },
+            "textVerticalAlign": {
+                "dataType": "string",
+                "values": [ "auto", "top", "bottom", "middle" ]
+            },
+            "triggerEvent": { "dataType": "bool" },
+            "padding": { "dataType": "number array" },
+            "itemGap": { "dataType": "number" },
+            "zlevel": { "dataType": "number" },
+            "z": { "dataType": "number" },
+            "left": { "dataType": "string number" },
+            "top": { "dataType": "string number" },
+            "right": { "dataType": "string number" },
+            "bottom": { "dataType": "string number" },
+            "backgroundColor": { "dataType": "color" },
+            "borderColor": { "dataType": "color" },
+            "borderWidth": { "dataType": "number" },
+            "borderRadius": { "dataType": "number array" },
+            "shadowBlur": { "dataType": "number" },
+            "shadowColor": { "dataType": "color" },
+            "shadowOffsetX": { "dataType": "number" },
+            "shadowOffsetY": { "dataType": "number" }
+        }
+    },
+    "legend": {
+        "dataType": "object"
+    },
+    "grid": {
+        "dataType": "object"
+    },
+    "xAxis": {
+        "dataType": "object"
+    },
+    "yAxis": {
+        "dataType": "object"
+    },
+    "polar": {
+        "dataType": "object"
+    },
+    "radiusAxis": {
+        "dataType": "object"
+    },
+    "angleAxis": {
+        "dataType": "object"
+    },
+    "radar": {
+        "dataType": "object"
+    },
+    "dataZoom": {
+        "dataType": "list object"
+    },
+    "visualMap": {
+        "dataType": "list object"
+    },
+    "tooltip": {
+        "dataType": "object"
+    },
+    "axisPointer": {
+        "dataType": "object"
+    },
+    "toolbox": {
+        "dataType": "object"
+    },
+    "brush": {
+        "dataType": "object"
+    },
+    "geo": {
+        "dataType": "object"
+    },
+    "parallel": {
+        "dataType": "object"
+    },
+    "parallelAxis": {
+        "dataType": "object"
+    },
+    "singleAxis": {
+        "dataType": "object"
+    },
+    "timeline": {
+        "dataType": "object"
+    },
+    "graphic": {
+        "dataType": "object"
+    },
+    "calendar": {
+        "dataType": "object"
+    },
+    "dataset": {
+        "dataType": "object"
+    },
+    "aria": {
+        "dataType": "object"
+    },
+    "series": {
+        "dataType": "list object"
+    },
+    "color": {
+        "dataType": "list hexColor"
+    },
+    "backgroundColor": {
+        "dataType": "color"
+    },
+    "textStyle": {
+        "dataType": "object"
+    },
+    "animation": {
+        "dataType": "bool"
+    },
+    "animationThreshold": {
+        "dataType": "int"
+    },
+    "animationDuration": {
+        "dataType": "int"
+    },
+    "animationEasing": {
+        "dataType": "string"
+    },
+    "animationDelay": {
+        "dataType": "int"
+    },
+    "animationDurationUpdate": {
+        "dataType": "int"
+    },
+    "animationEasingUpdate": {
+        "dataType": "string"
+    },
+    "animationDelayUpdate": {
+        "dataType": "int"
+    },
+    "blendMode": {
+        "dataType": "string"
+    },
+    "useUTC": {
+        "dataType": "bool"
+    }
+}
