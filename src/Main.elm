@@ -1,12 +1,12 @@
 module Main exposing (..)
 import Browser exposing (Document)
-import Html exposing (Html, button, div, text, h1)
-import Html.Events exposing (onClick)
-import Html.Attributes exposing (id, style)
-import Html.Attributes exposing (title)
+import Element exposing (Element, el, none, row, alignRight, alignLeft, fill, width, height, rgb255, spacing, padding, html, fillPortion, centerX, centerY)
+import Element.Background as Background
+import Element.Border as Border
+import Html
+import Html.Attributes as Attr
 
 -- MAIN
-main : Program () Model Msg
 main =
   Browser.document 
     { init = init
@@ -20,7 +20,9 @@ type alias Model = Int
 
 init : () -> ( Model, Cmd Msg )
 init _ =
-  ( 1, Cmd.none )
+  ( 1
+  , Cmd.none
+  )
 
 -- UPDATE
 type Msg = Increment | Decrement
@@ -46,15 +48,14 @@ subscriptions _ =
 view : Model -> Document Msg
 view model =
   { title = "Echarts Creator"
-  , body = 
-    [ Html.h1 [] [ text "Hello Echarts and Elm!" ]
-    , button [ onClick Decrement ] [ text "-" ]
-    , div [] [ text (String.fromInt model) ]
-    , button [ onClick Increment ] [ text "+" ]
-    , div [ id "echarts"
-          , style "width" "600px"
-          , style "height" "400px"
-          ] []
-    ]
+  , body = [ Element.layout [] layoutMain ]  
   }
-    
+
+layoutMain: Element Msg
+layoutMain = 
+  row [ width fill , height fill, spacing 0, padding 0 ] 
+      [ el [alignLeft, Background.color (rgb255 255 255 255), width (fillPortion 4), height fill] 
+           (el [ centerX, centerY, Border.color (rgb255 0 0 0), Border.width 1, Border.dashed] (html (Html.div [ Attr.id "echarts", Attr.style "width" "600px", Attr.style "height" "400px"] [])))
+      , el [alignRight, Background.color (rgb255 200 200 200), width (fillPortion 1), height fill] 
+           (html (Html.p [] [ Html.text "Settings:" ]))
+      ]
