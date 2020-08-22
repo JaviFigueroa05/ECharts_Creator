@@ -15,3 +15,4 @@ myChart.setOption({
         }
     }
 });
+
